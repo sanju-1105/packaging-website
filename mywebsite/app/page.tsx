@@ -1,111 +1,160 @@
-export default function PackagingLogisticsWebsite() {
+import Image from "next/image";
+
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="bg-[#f8f5f2] text-black">
+
+      {/* Top Bar */}
+      <div className="bg-black text-white px-6 py-2 flex justify-between text-sm">
+        <div className="flex gap-6">
+          <p>📞 9266089003</p>
+          <p>✉️ tagandship26@gmail.com</p>
+        </div>
+
+        <div>
+          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+        </div>
+      </div>
+
+      {/* Header */}
+      <header className="bg-white shadow-md sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Tag & Ship"
+              width={80}
+              height={80}
+            />
+
+            <div>
+              <h1 className="text-2xl font-bold text-[#8b5e3c]">
+                TAG & SHIP
+              </h1>
+
+              <p className="text-sm tracking-[4px] text-[#d48a1d]">
+                SINCE 2026
+              </p>
+            </div>
+          </div>
+
+          <nav className="hidden md:flex gap-8 font-medium">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Why Us</a>
+            <a href="#">Contact</a>
+          </nav>
+
+          <button className="bg-[#c57a1f] text-white px-5 py-3 rounded-xl font-semibold hover:scale-105 transition">
+            Call Now
+          </button>
+        </div>
+      </header>
 
       {/* Hero Section */}
-      <section className="bg-black text-white py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <section className="bg-black text-white py-24 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
           <div>
-            <h1 className="text-5xl font-bold leading-tight mb-6">
-              Smart Packaging & Logistics Solutions
-            </h1>
+            <span className="bg-[#8b5e3c] px-4 py-2 rounded-full text-sm">
+              Packaging & Logistics Solutions
+            </span>
 
-            <p className="text-lg text-gray-300 mb-8">
-              Helping D2C brands improve packaging quality, reduce return
-              rates, manage inventory, and ensure smooth dispatch operations.
+            <h2 className="text-6xl font-bold mt-6 leading-tight">
+              Smart Packaging.
+              <br />
+              Reliable Logistics.
+            </h2>
+
+            <p className="text-gray-300 mt-6 text-lg leading-8">
+              Helping D2C brands improve packaging quality,
+              reduce return rates, manage inventory, and ensure
+              smooth dispatch operations.
             </p>
 
-            <div className="flex gap-4">
-              <button className="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
-                Get Started
+            <div className="flex gap-5 mt-8">
+              <button className="bg-[#c57a1f] px-6 py-4 rounded-2xl font-semibold hover:scale-105 transition">
+                Our Services
               </button>
 
-              <button className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-black transition">
+              <button className="border border-white px-6 py-4 rounded-2xl font-semibold hover:bg-white hover:text-black transition">
                 Contact Us
               </button>
             </div>
           </div>
 
-          <div className="bg-gray-900 rounded-3xl p-8 shadow-2xl">
-            <div className="grid grid-cols-2 gap-4">
-
-              <div className="bg-gray-800 rounded-2xl p-6">
-                <h3 className="text-3xl font-bold">98%</h3>
-                <p className="text-gray-400 mt-2">On-Time Dispatch</p>
-              </div>
-
-              <div className="bg-gray-800 rounded-2xl p-6">
-                <h3 className="text-3xl font-bold">40%</h3>
-                <p className="text-gray-400 mt-2">Reduced Returns</p>
-              </div>
-
-              <div className="bg-gray-800 rounded-2xl p-6">
-                <h3 className="text-3xl font-bold">24/7</h3>
-                <p className="text-gray-400 mt-2">Operations Support</p>
-              </div>
-
-              <div className="bg-gray-800 rounded-2xl p-6">
-                <h3 className="text-3xl font-bold">100+</h3>
-                <p className="text-gray-400 mt-2">Businesses Supported</p>
-              </div>
-
-            </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop"
+              className="rounded-3xl shadow-2xl"
+            />
           </div>
 
         </div>
       </section>
 
+      {/* Features */}
+      <section className="-mt-12 px-6">
+        <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl p-10 grid md:grid-cols-4 gap-8">
+
+          {[
+            "On-Time Delivery",
+            "Secure Packaging",
+            "Inventory Management",
+            "24/7 Support",
+          ].map((item, index) => (
+            <div key={index} className="text-center">
+              <h3 className="font-bold text-xl text-[#8b5e3c]">
+                {item}
+              </h3>
+
+              <p className="text-gray-600 mt-2">
+                Professional logistics and packaging support.
+              </p>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
       {/* Services */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
 
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4">Our Services</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold">
+              End-to-End Solutions
+            </h2>
 
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              End-to-end support for packaging, logistics, inventory, and
-              order management.
+            <p className="text-gray-600 mt-4 text-lg">
+              Smart services for packaging, logistics, and operations.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
 
             {[
-              {
-                title: "Packaging Optimization",
-                desc: "Improve customer experience with secure and premium packaging solutions.",
-              },
-              {
-                title: "Inventory Management",
-                desc: "Track inventory accurately and reduce stock mismatches efficiently.",
-              },
-              {
-                title: "Dispatch Support",
-                desc: "Ensure timely order dispatch and reduce operational delays.",
-              },
-              {
-                title: "Return Reduction",
-                desc: "Minimize returns caused by damaged or incorrect packaging.",
-              },
-              {
-                title: "Order Accuracy",
-                desc: "Reduce wrong order issues and improve customer satisfaction.",
-              },
-              {
-                title: "Warehouse Coordination",
-                desc: "Smooth coordination between operations, logistics, and fulfillment teams.",
-              },
+              "Packaging Optimization",
+              "Inventory Management",
+              "Dispatch Support",
+              "Return Reduction",
+              "Warehouse Coordination",
+              "Customer Experience",
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition"
+                className="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition"
               >
-                <h3 className="text-2xl font-semibold mb-4">
-                  {service.title}
+                <h3 className="text-2xl font-bold text-[#8b5e3c]">
+                  {service}
                 </h3>
 
-                <p className="text-gray-600">{service.desc}</p>
+                <p className="text-gray-600 mt-4 leading-7">
+                  Improve operational efficiency and deliver
+                  better customer satisfaction.
+                </p>
               </div>
             ))}
 
@@ -113,73 +162,43 @@ export default function PackagingLogisticsWebsite() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      {/* Footer */}
+      <footer className="bg-black text-white py-16 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
 
           <div>
-            <h2 className="text-4xl font-bold mb-6">Why Choose Us?</h2>
+            <h2 className="text-3xl font-bold text-[#d48a1d]">
+              TAG & SHIP
+            </h2>
 
-            <ul className="space-y-4 text-lg text-gray-700">
-              <li>✔ Fast and efficient operational support</li>
-              <li>✔ Focus on reducing return losses</li>
-              <li>✔ Better customer packaging experience</li>
-              <li>✔ Data-driven inventory tracking</li>
-              <li>✔ Reliable dispatch and coordination</li>
-            </ul>
+            <p className="mt-4 text-gray-400 leading-7">
+              Delivering trust through smart packaging and reliable logistics solutions.
+            </p>
           </div>
 
-          <div className="bg-gray-100 rounded-3xl p-10 shadow-lg">
-            <h3 className="text-3xl font-bold mb-4">
-              Grow Your Operations
+          <div>
+            <h3 className="text-xl font-semibold mb-4">
+              Contact
             </h3>
 
-            <p className="text-gray-600 mb-6">
-              We help brands streamline packaging and logistics operations
-              to improve customer satisfaction and operational efficiency.
-            </p>
+            <p>📞 9266089003</p>
+            <p className="mt-2">✉️ tagandship26@gmail.com</p>
+          </div>
 
-            <button className="bg-black text-white px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
-              Book a Consultation
-            </button>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">
+              Location
+            </h3>
+
+            <p>India</p>
           </div>
 
         </div>
-      </section>
 
-      {/* Contact */}
-      <section className="py-20 px-6 bg-black text-white">
-        <div className="max-w-4xl mx-auto text-center">
-
-          <h2 className="text-4xl font-bold mb-4">
-            Let’s Work Together
-          </h2>
-
-          <p className="text-gray-300 mb-10">
-            If you are looking to improve packaging quality, reduce return
-            rates, or streamline logistics operations, contact us today.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 text-left">
-
-            <div className="bg-gray-900 rounded-2xl p-6">
-              <h4 className="font-semibold text-xl mb-2">Phone</h4>
-              <p className="text-gray-400">+91 XXXXX XXXXX</p>
-            </div>
-
-            <div className="bg-gray-900 rounded-2xl p-6">
-              <h4 className="font-semibold text-xl mb-2">Email</h4>
-              <p className="text-gray-400">yourmail@email.com</p>
-            </div>
-
-            <div className="bg-gray-900 rounded-2xl p-6">
-              <h4 className="font-semibold text-xl mb-2">Location</h4>
-              <p className="text-gray-400">Delhi, India</p>
-            </div>
-
-          </div>
+        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
+          © 2026 Tag & Ship. All Rights Reserved.
         </div>
-      </section>
+      </footer>
 
     </div>
   );
