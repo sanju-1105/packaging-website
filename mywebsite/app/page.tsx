@@ -1,22 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-[#f8f5f2] text-black">
+    <div className="bg-[#f8f5f2] text-black min-h-screen">
 
-      {/* Top Bar */}
-      <div className="bg-black text-white px-6 py-2 flex justify-between text-sm">
+      <div className="bg-black text-white px-6 py-3 flex justify-between items-center text-sm">
         <div className="flex gap-6">
-          <p>📞 9266089003</p>
-          <p>✉️ tagandship26@gmail.com</p>
+          <a href="tel:9266089003">📞 9266089003</a>
+
+          <a href="mailto:tagandship26@gmail.com">
+            ✉️ tagandship26@gmail.com
+          </a>
         </div>
 
         <div>
-          <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+          <p>Mon - Sat: 9 AM - 7 PM</p>
         </div>
       </div>
 
-      {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
@@ -24,8 +26,8 @@ export default function Home() {
             <Image
               src="/logo.png"
               alt="Tag & Ship"
-              width={80}
-              height={80}
+              width={70}
+              height={70}
             />
 
             <div>
@@ -40,20 +42,23 @@ export default function Home() {
           </div>
 
           <nav className="hidden md:flex gap-8 font-medium">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Why Us</a>
-            <a href="#">Contact</a>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/why-us">Why Us</Link>
+            <Link href="/contact">Contact</Link>
           </nav>
 
-          <button className="bg-[#c57a1f] text-white px-5 py-3 rounded-xl font-semibold hover:scale-105 transition">
-            Call Now
-          </button>
+          <a
+            href="https://wa.me/919266089003"
+            target="_blank"
+            className="bg-[#c57a1f] text-white px-5 py-3 rounded-xl font-semibold"
+          >
+            WhatsApp Us
+          </a>
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="bg-black text-white py-24 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
@@ -70,18 +75,24 @@ export default function Home() {
 
             <p className="text-gray-300 mt-6 text-lg leading-8">
               Helping D2C brands improve packaging quality,
-              reduce return rates, manage inventory, and ensure
-              smooth dispatch operations.
+              reduce return rates, manage inventory,
+              and ensure smooth dispatch operations.
             </p>
 
             <div className="flex gap-5 mt-8">
-              <button className="bg-[#c57a1f] px-6 py-4 rounded-2xl font-semibold hover:scale-105 transition">
+              <Link
+                href="/services"
+                className="bg-[#c57a1f] px-6 py-4 rounded-2xl font-semibold"
+              >
                 Our Services
-              </button>
+              </Link>
 
-              <button className="border border-white px-6 py-4 rounded-2xl font-semibold hover:bg-white hover:text-black transition">
+              <Link
+                href="/contact"
+                className="border border-white px-6 py-4 rounded-2xl font-semibold"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -95,74 +106,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="-mt-12 px-6">
-        <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl p-10 grid md:grid-cols-4 gap-8">
-
-          {[
-            "On-Time Delivery",
-            "Secure Packaging",
-            "Inventory Management",
-            "24/7 Support",
-          ].map((item, index) => (
-            <div key={index} className="text-center">
-              <h3 className="font-bold text-xl text-[#8b5e3c]">
-                {item}
-              </h3>
-
-              <p className="text-gray-600 mt-2">
-                Professional logistics and packaging support.
-              </p>
-            </div>
-          ))}
-
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold">
-              End-to-End Solutions
-            </h2>
-
-            <p className="text-gray-600 mt-4 text-lg">
-              Smart services for packaging, logistics, and operations.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            {[
-              "Packaging Optimization",
-              "Inventory Management",
-              "Dispatch Support",
-              "Return Reduction",
-              "Warehouse Coordination",
-              "Customer Experience",
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition"
-              >
-                <h3 className="text-2xl font-bold text-[#8b5e3c]">
-                  {service}
-                </h3>
-
-                <p className="text-gray-600 mt-4 leading-7">
-                  Improve operational efficiency and deliver
-                  better customer satisfaction.
-                </p>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
       <footer className="bg-black text-white py-16 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
 
@@ -172,33 +115,36 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-gray-400 leading-7">
-              Delivering trust through smart packaging and reliable logistics solutions.
+              Delivering trust through smart packaging and logistics.
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">
-              Contact
-            </h3>
-
+            <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <p>📞 9266089003</p>
             <p className="mt-2">✉️ tagandship26@gmail.com</p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">
-              Location
-            </h3>
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
 
-            <p>India</p>
+            <div className="flex flex-col gap-2">
+              <Link href="/">Home</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
           </div>
 
         </div>
-
-        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
-          © 2026 Tag & Ship. All Rights Reserved.
-        </div>
       </footer>
+
+      <a
+        href="https://wa.me/919266089003"
+        target="_blank"
+        className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-4 rounded-full shadow-2xl text-lg font-bold"
+      >
+        WhatsApp
+      </a>
 
     </div>
   );
